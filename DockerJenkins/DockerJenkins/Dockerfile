@@ -1,6 +1,6 @@
 ﻿FROM microsoft/dotnet:latest
-RUN dotnet restore && dotnet publish -c release
 COPY . /app
 WORKDIR /app
+RUN dotnet restore && dotnet publish -c release
 EXPOSE 5000
 ENTRYPOINT ["dotnet", "run"]
